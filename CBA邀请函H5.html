@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1,maximun-scale=1,user-scalable=no,width=device-width">
+    <title>移动框架</title>
+    <link href="css/animations.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <script src="js/zepto.min.js"></script>
+    <script src="js/touch.js"></script>
+    <script src="js/index.js"></script>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        html,body{width:100%;height:100%;}
+        img{width:100%;height:100%;}
+        .hide{display: none;}
+        .page{width:100%;height:100%;position:absolute;overflow: hidden;}
+        .jiantou{width:40px;position:absolute;left:50%;top:90%;margin-left:-20px;}
+
+        .page-1-1{background:url("images/page1_bg.png") no-repeat left top;background-size: cover;}
+        .page-1-1 .center{width:94.67%;height:86.1%;background:url("images/page1_centerbg.png") no-repeat;background-size:cover;position:absolute;left:2.67%;top:0;}
+        .page-1-1 .center .pic1{width:43.9%;height:32.1%;position:absolute;left:31.47%;top:17.2%;}
+        .page-1-1 .center .pic2{width:37.2%;height:11.47%;position:absolute;left:31.47%;top:57.65%;}
+        .page-1-1 .footer{width:100%;height:100%;}
+        .page-1-1 .footer .pic3{width:100%;height:35.61%;position:absolute;left:0;top:64.4%;}
+        .page-1-1 .footer .pic4{width:17.3%;height:10.6%;position:absolute;left:41.3%;top:75.1%;}
+        .page-1-1 .footer .pic5{width:30.9%;height:1.9%;position:absolute;left:34.4%;top:86.8%;}
+        .page-2-1{background:url("images/page2_bg.png") no-repeat left top;background-size: cover;}
+        .page-2-1 .text{width:79.2%;height:18.97%;position:absolute;left:7.7%;top:13.6%;}
+        .page-2-1 .gantan{width:5.07%;height:18.97%;position:absolute;left:86.9%;top:13.6%;}
+        .page-2-1 .title{width:26.27%;height:16.3%;}
+        .page-2-1 .p{width:56.9%;height:3.75%;}
+        .page-2-1 .title_16{position:absolute;left:8%;top:44.45%;}
+        .page-2-1 .title_17{position:absolute;left:8%;top:63.7%;}
+        .page-2-1 .a_16{position:absolute;left:35.1%;top:44.45%;}
+        .page-2-1 .b_16{position:absolute;left:35.1%;top:48.65%;}
+        .page-2-1 .c_16{position:absolute;left:35.1%;top:52.85%;}
+        .page-2-1 .d_16{position:absolute;left:35.1%;top:57%;}
+        .page-2-1 .a_17{position:absolute;left:35.1%;top:63.7%;}
+        .page-2-1 .b_17{position:absolute;left:35.1%;top:67.9%;}
+        .page-2-1 .c_17{position:absolute;left:35.1%;top:72.1%;}
+        .page-2-1 .d_17{position:absolute;left:35.1%;top:76.3%;}
+        .page-3-1{background:url("images/page3_bg.png") no-repeat left top;background-size: cover;}
+        .page-3-1 .text{width:74.67%;height:53.97%;position:absolute;left:12.67%;top:17.5%;}
+        .page-3-1 .anniu{width:48%;height:5.25%;}
+        .page-3-1 .goupiao{position:absolute;left:24.9%;top:79%;}
+        .page-3-1 .fenxiang{position:absolute;left:24.9%;top:86%;}
+    </style>
+</head>
+<body>
+<div class="page page-1-1">
+    <div class="center pt-page-moveFromTop">
+        <div class="pic1"><img src="images/dongwan.png" class="animated bounceInDown pt-page-delay100"></div>
+        <div class="pic2"><img src="images/yaoqinghan.png" class="animated flipInX pt-page-delay1000"></div>
+    </div>
+    <div class="footer pt-page-moveFromBottom pt-page-delay100">
+        <div class="pic3"><img src="images/page1_bot_03.png"></div>
+        <div class="pic4"><img src="images/chayue.png" class="move_Opacitylx"></div>
+        <div class="pic5"><img src="images/page1_p.png" class="animated lightSpeedIn pt-page-delay700"></div>
+    </div>
+    <div class="jiantou"><img src="images/arrowup.png" class="move_Opacity"></div>
+</div>
+<div class="page page-2-1 hide">
+    <div class="text"><img src="images/page2_text.png" class="animated fadeInDown hide"></div>
+    <div class="gantan"><img src="images/page2_gantan.png" class="animated rotateInUpLeft pt-page-delay500 hide"></div>
+    <div class="title title_16"><img src="images/title_16.png" class="animated rotateInDownLeft pt-page-delay1000 hide"></div>
+    <div class="p a_16"><img src="images/a-16.png" class="animated pt-page-delay1200 flipInX hide"></div>
+    <div class="p b_16"><img src="images/b-16.png" class="animated pt-page-delay1400 flipInX hide"></div>
+    <div class="p c_16"><img src="images/c-16.png" class="animated pt-page-delay1600 flipInX hide"></div>
+    <div class="p d_16"><img src="images/d-16.png" class="animated pt-page-delay1800 flipInX hide"></div>
+    <div class="title title_17"><img src="images/title_17.png" class="animated rotateInDownLeft pt-page-delay2000 hide"></div>
+    <div class="p a_17"><img src="images/a-17.png" class="animated pt-page-delay2200 flipInX hide"></div>
+    <div class="p b_17"><img src="images/b-17.png" class="animated pt-page-delay2400 flipInX hide"></div>
+    <div class="p c_17"><img src="images/c-17.png" class="animated pt-page-delay2600 flipInX hide"></div>
+    <div class="p d_17"><img src="images/d-17.png" class="animated pt-page-delay2800 flipInX hide"></div>
+    <div class="jiantou"><img src="images/arrowup.png" class="move_Opacity hide"></div>
+</div>
+<div class="page page-3-1 hide">
+    <div class="text"><img src="images/page3_text.png" class="animated bounceInUp hide"></div>
+    <div class="anniu goupiao"><img src="images/page3_goupiao.png" class="animated fadeIn pt-page-delay700 hide"></div>
+    <div class="anniu fenxiang"><img src="images/page3_fenxiang.png" class="animated fadeIn pt-page-delay1000 hide"></div>
+</div>
+</body>
+</html>
